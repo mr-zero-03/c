@@ -1,2 +1,4 @@
 # c
-Programas en C :D
+Sotfware in C :D
+
+Software I made in C
