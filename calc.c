@@ -13,10 +13,8 @@ void operation(int option){
 		}else{
 			printf("segundo numero: ");
 		}
-    scanf("%f", &n2);
-  }
-
-	
+    	scanf("%f", &n2);
+  	}
 	switch(option){
 		case 1:		//Suma
 			r=n+n2;
@@ -59,23 +57,23 @@ void menu(){
 		printf("\n-------------------------------------");
 		printf ("\nElija su opcion: ");
 		scanf("%i",&option);
-    printf("\n");
+    		printf("\n");
 		switch (option){
 			case 1 ... 6:
 				operation(option);
 			break;
 			case 7:
 				printf("Gracias por usar");
-      break;
+      			break;
 			default:
 				printf("Opcion no valida");
 		}
-    printf("\n");
+    	printf("\n");
 	}while(option != 7);
 }
 
 int main(){
 	menu();
 	
-	return (0);
+	return 0;
 }
