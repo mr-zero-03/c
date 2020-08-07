@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "wizard.h"
+#include "/lib/wizard.h"
 
 void menu(){
 	int option=0;
