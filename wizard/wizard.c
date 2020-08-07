@@ -1,63 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+#include "wizard.h"
 
-
-void program(){
-	int guess=0, num=0;
-	
-	printf("\n---------------------------------------\n");						//Adivinador de número
-	printf("                WIZARD\n\n");
-	
-	do{											//Captura de número
-		printf("Ingrese el número a adivinar en un rango de 0-100: ");
-		scanf("%i",&guess);
-		if(guess < 0 || guess>100){
-			printf("El número es invalido\n");
+void menu(){
+	int option=0;
+	do{
+		printf("\n------------------------------\n");
+		printf("		WIZARD\n\n");
+		printf("1. Jugar contra la máquina\n");
+		printf("2. Dos jugadores\n");
+		printf("3. Acerca del juego\n");
+		printf("4. Salir\n");
+		printf("------------------------------\n");
+		printf("Digite su opción: ");
+		scanf("%i", &option);
+		printf("\n");
+		
+		switch(option){
+			case 1:
+				machine();
+			break;
+			case 2:
+				twoPlayers();
+			break;
+			case 3:
+				printf("El juego Wizard consiste en adivinar el número que da la máquina aleatoriamente o un jugador");
+			break;
+			case 4:
+				printf("Gracias por usar");
+			break;
+			default:
+				printf("Opción invalida");
 		}
-	}while(guess < 0 || guess>100);
-	system("clear");
-	
-	
-	printf("\n---------------------------------------\n");
-	printf("                WIZARD\n\n");
-	do{											//Adivinar número
-		printf("Digite un número del 0-100: ");
-		scanf("%i",&num);
-		if ((num>100) || (num<0)){
-			printf ("El número que digitó es invalido\n");
-		}else if(num<guess){
-			printf("El número a adivinar es mayor\n\n");
-		}else if (num>guess){
-			printf("El número a adivinar es menor\n\n");
-		}else if (num==guess){
-			printf("Felicidades has adivinado el número!!!\n");
-			printf("\n---------------------------------------\n");
-		}
-	}while(num!=guess);
+		printf("\n");
+	}while(option != 4);
 }
 
-
 int main(){
-	int count=0;
-	int option=1;
-	do{
-		if(count == 0){
-			printf("\nBienvenido a Wizard, el adivinador de número\n\n");
-			program();
-			count=1;
-		}else if(count==1){
-			printf("\nPulsa 1 para seguir jugando\nPulsa 0 para salir\n");
-			scanf("%i", &option);
-			if(option==0){
-				printf("Gracias por jugar");
-			}else if(option==1){
-				program();
-			}else{
-				printf("Opción invalida");
-			}
-			printf("\n");
-		}
-	}while(option != 0);
-
-	return 0;	
+	menu();
+	
+	return 0;
 }
