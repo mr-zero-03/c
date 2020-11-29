@@ -16,25 +16,25 @@ void operation(int option){
     	scanf("%f", &n2);
   	}
 	switch(option){
-		case 1:		//Suma
+		case 1:		//+
 			r=n+n2;
 		break;
-		case 2:		//Resta
+		case 2:		//-
 			r=n-n2;
 		break;
-		case 3:		//Multiplicación
+		case 3:		//*
 			r=n*n2;
 		break;
-		case 4:		//Dividir
+		case 4:		// /
 			r=n/n2;
 		break;
-		case 5:		//Potenciar
+		case 5:		//^
 			r=n; 
 			for (int i=1; i<n; i++){
 				r=r*n;
 			}
 		break;
-		case 6:		//Radicar
+		case 6:		//√
 			n=sqrt(n);
 			r=n;
 		break;
@@ -47,13 +47,13 @@ void menu(){
 	do{
 		printf("\n-------------------------------------");
 		printf("\n 	       CALC \n");
-		printf ("1. Sumar \n");
-		printf ("2. Restar \n");
-		printf ("3. Multiplicar \n");
-		printf ("4. Dividir \n");
-		printf ("5. Potenciar \n");
-		printf ("6. Radicar \n");
-		printf ("7. Salir");
+		printf ("1. Sumar \n");				//+
+		printf ("2. Restar \n");			//-
+		printf ("3. Multiplicar \n");			//*
+		printf ("4. Dividir \n");			// /
+		printf ("5. Potenciar \n");			//^
+		printf ("6. Radicar \n");			//√
+		printf ("7. Salir");				//Leave
 		printf("\n-------------------------------------");
 		printf ("\nElija su opcion: ");
 		scanf("%i",&option);
