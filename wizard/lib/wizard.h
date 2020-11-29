@@ -1,6 +1,6 @@
 void guessNumber(int guess){
 	int num=0;
-	do{											//Adivinar número
+	do{
 		printf("Digite un número del 0-100: ");
 		scanf("%i",&num);
 		if ((num>100) || (num<0)){
@@ -25,7 +25,7 @@ void machine(){
 
 void twoPlayers(){
 	int guess=0;
-	do{											//Captura de número
+	do{
 		printf("Ingrese el número a adivinar en un rango de 0-100: ");
 		scanf("%i",&guess);
 		if(guess < 0 || guess>100){
